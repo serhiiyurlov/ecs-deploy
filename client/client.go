@@ -48,7 +48,7 @@ func (c *Client) RegisterTaskDefinition(task *string, image, tag *[]string) (str
 		Family:               output.TaskDefinition.Family,
 		NetworkMode:          output.TaskDefinition.NetworkMode,
 		PlacementConstraints: output.TaskDefinition.PlacementConstraints,
-		Revision:             output.TaskDefinition.Revision,
+		Volumes:              output.TaskDefinition.Volumes,
 	}
 	resp, err := c.svc.RegisterTaskDefinition(input)
 	if err != nil {
